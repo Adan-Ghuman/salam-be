@@ -48,7 +48,7 @@ export interface PaymentDetails {
     vat: number;
     promoCode?: string;
     totalAmount: number;
-    sim: simDetails; 
+    sim: string; 
     delivery?: DeliveryDetails; 
 }
 
