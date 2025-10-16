@@ -26,7 +26,7 @@ export const updatePayment = AsyncHandler(async(req, res) => {
         throw new BadRequestError("Payment data is required");
     }
 
-    const requiredFields = ['packageName', 'mobileNumber', 'paymentMode', 'packageFee', 'vat', 'totalAmount', 'sim'];
+    const requiredFields = ['packageName', 'mobileNumber', 'paymentMode', 'packageFee', 'totalAmount', 'sim'];
     for (const field of requiredFields) {
         if (!paymentData[field]) {
             throw new BadRequestError(`${field} is required in payment data`);
